@@ -20,5 +20,13 @@ namespace SCAPI_Frontend.Context
         {
             optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
         }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<ChordModel>().HasKey(c => c.Id);
+            builder.Entity<ChordModel>().OwnsOne(c => c.ChordDiagram);
+
+            builder.Entity<ChordDiagramModel>().HasKey(cd => cd.Id);
+        }
     }
 }
