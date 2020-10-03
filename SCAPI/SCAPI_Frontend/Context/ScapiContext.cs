@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using SCAPI_Frontend.Models;
 
 namespace SCAPI_Frontend.Context
 {
@@ -15,6 +12,9 @@ namespace SCAPI_Frontend.Context
         {
             _config = config;
         }
+
+        public virtual DbSet<ChordModel> Chords { get; set; }
+        public virtual DbSet<ChordDiagramModel> ChordDiagrams { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
