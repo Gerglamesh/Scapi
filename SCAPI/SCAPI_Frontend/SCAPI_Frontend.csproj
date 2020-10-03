@@ -35,6 +35,17 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Migrations\20201003135214_Add_CheckConstraintForChordType_ChangeFrom_Owned_To_OneToOne.cs" />
+    <Compile Remove="Migrations\20201003135214_Add_CheckConstraintForChordType_ChangeFrom_Owned_To_OneToOne.Designer.cs" />
+    <Compile Remove="Migrations\20201003135322_Add_CheckConstraintForChordType_ChangeFrom_Owned_To_OneToOne.cs" />
+    <Compile Remove="Migrations\20201003135322_Add_CheckConstraintForChordType_ChangeFrom_Owned_To_OneToOne.Designer.cs" />
+    <Compile Remove="Migrations\20201003135759_Add_CheckConstraintForChordType_ChangeFrom_Owned_To_OneToOne.cs" />
+    <Compile Remove="Migrations\20201003135759_Add_CheckConstraintForChordType_ChangeFrom_Owned_To_OneToOne.Designer.cs" />
+    <Compile Remove="Migrations\20201003140717_test_thatCheckWorks.cs" />
+    <Compile Remove="Migrations\20201003140717_test_thatCheckWorks.Designer.cs" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

@@ -15,6 +15,8 @@ namespace SCAPI_Frontend.Models
         public int StartString { get; set; }
         [Required]
         public string TriadType { get; set; }
+        [Required]
+        public string ChordType { get; set; }
 
         public string ColorNote { get; set; }
         [Required]
