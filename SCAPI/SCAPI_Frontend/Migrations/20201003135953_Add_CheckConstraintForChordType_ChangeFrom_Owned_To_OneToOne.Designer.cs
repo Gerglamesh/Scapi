@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SCAPI_Frontend.Context;
 
 namespace SCAPI_Frontend.Migrations
 {
     [DbContext(typeof(ScapiContext))]
-    partial class ScapiContextModelSnapshot : ModelSnapshot
+    [Migration("20201003135953_Add_CheckConstraintForChordType_ChangeFrom_Owned_To_OneToOne")]
+    partial class Add_CheckConstraintForChordType_ChangeFrom_Owned_To_OneToOne
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
